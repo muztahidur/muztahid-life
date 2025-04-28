@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muztahid App | Home</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+  <!-- Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<!-- Moment Hijri.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-hijri/2.11.3/moment-hijri.min.js"></script>
+
+</head>
+
+<body>
+
+  <header class="app-header">
+    <h1>👋 স্বাগতম, <span id="user-name">মুজতাহিদ</span>!</h1>
+    <p class="tagline">আপনার দৈনন্দিন পরিকল্পনার অ্যাপ</p>
+
+    <div class="dates">
+      <p id="greeting">লোড হচ্ছে...</p>
+      <div id="arabic-date" class="date-item">আরবি তারিখ: লোড হচ্ছে...</div>
+      <!-- <div id="english-date" class="date-item">ইংরেজি তারিখ: লোড হচ্ছে...</div> -->
+      <div id="date-time" class="date-item">তারিখ ও সময়: লোড হচ্ছে...</div>
+    </div>
+
+    <section id="sun-times" class="sun-times">
+      <p>🌅 সূর্যোদয়: <span id="sunrise-time">-</span></p>
+      <p>🍴 দুপুর: <span id="noon-time">-</span></p>
+      <p>🌙 সূর্যাস্ত: <span id="sunset-time">-</span></p>
+    </section>
+  </header>
+
+  <main class="prayer-times-section">
+    <h2>🕋 নামাজের সময়</h2>
+    <div id="prayer-times" class="prayer-grid">
+      <div class="prayer">
+        <h3>ফজর</h3>
+        <input type="time" id="fajr">
+      </div>
+      <div class="prayer">
+        <h3>যোহর</h3>
+        <input type="time" id="dhuhr">
+      </div>
+      <div class="prayer">
+        <h3>আসর</h3>
+        <input type="time" id="asr">
+      </div>
+      <div class="prayer">
+        <h3>মাগরিব</h3>
+        <input type="time" id="maghrib">
+      </div>
+      <div class="prayer">
+        <h3>এশা</h3>
+        <input type="time" id="isha">
+      </div>
+    </div>
+
+    <button id="saveTimes" class="save-button">✅ সময় সংরক্ষণ করুন</button>
+  </main>
+
+  <main class="links-section">
+    <a href="Exercise/index.html" class="button-link">
+      💪 এক্সারসাইজ
+    </a>
+    <a href="Study/study.html" class="button-link">
+      📚 স্টাডি
+    </a>
+    <a href="Clock/clock.html" class="button-link">
+      🕰️ ঘড়ি
+    </a>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; ২০২৫ মুজতাহিদ অ্যাপ. সর্বস্বত্ব সংরক্ষিত।</p>
+  </footer>
+
+  <!-- Dark Mode Toggle -->
+  <button id="dark-mode-toggle" class="dark-mode-btn">🌙</button>
+
+  <!-- Alarm Sound -->
+  <audio id="alarm-sound" src="alarm-sound.mp3" preload="auto"></audio>
+
+</body>
+
+</html>

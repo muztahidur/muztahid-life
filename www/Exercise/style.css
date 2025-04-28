@@ -1,0 +1,311 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    color: #333;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Header */
+header {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #00bcd4;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Day Selector */
+.day-selector {
+    margin: 20px 0;
+    text-align: center;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+select:hover {
+    border-color: #00bcd4;
+}
+
+/* Routine Section */
+#routine {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#routine h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #00acc1;
+}
+
+#routine-list {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+#routine-list li {
+    background: #e0f7fa;
+    margin: 10px 0;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+#routine-list li:hover {
+    transform: scale(1.02);
+    background: #b2ebf2;
+    color: #004d40;
+}
+
+/* Clock and Date */
+#clock {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e0f7fa;
+    text-shadow: 1px 1px 2px #004d40;
+}
+
+#date {
+    font-size: 1rem;
+    color: #e0f2f1;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Light Mode Clock Style */
+body.light-mode #clock {
+    color: #004d40;
+}
+
+body.light-mode #date {
+    color: #00695c;
+}
+
+/* Dark Mode Clock Style */
+body.dark-mode #clock {
+    color: #e0f7fa;
+}
+
+body.dark-mode #date {
+    color: #b2ebf2;
+}
+
+/* Extra Section */
+.extra-section {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+.extra-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00acc1;
+}
+
+.extra-section input {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.extra-section input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.extra-section button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 5px;
+}
+
+.extra-section button:hover {
+    background: #0097a7;
+}
+
+#extraSubjectsList {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+#extraSubjectsList li {
+    background: #e0f7fa;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+#extraSubjectsList li:hover {
+    transform: scale(1.02);
+    background: #b2ebf2;
+    color: #004d40;
+}
+
+/* Remove button */
+.remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #D32F2F;
+    /* A professional, muted red color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #B71C1C;
+    /* A slightly darker red on hover */
+}
+
+
+
+/* Footer */
+footer {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    background: #00bcd4;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #f2f2f2;
+}
+
+.dark-mode h1 {
+    color: #ffcc00;
+}
+
+.dark-mode #routine-list li,
+.dark-mode #extraSubjectsList li {
+    background-color: #394b59;
+    color: white;
+}
+
+.dark-mode .extra-section button {
+    background-color: #ff9900;
+}
+
+.dark-mode .extra-section button:hover {
+    background-color: #e68a00;
+}
+
+.dark-mode .remove-btn {
+    background-color: #ff3333;
+}
+
+.dark-mode .remove-btn:hover {
+    background-color: #cc0000;
+}
+
+#toggle-darkmode {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+
+#toggle-darkmode:hover {
+    background-color: #45a049;
+}

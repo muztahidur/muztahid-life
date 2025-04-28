@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏋️ Exercise Routine App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <button id="toggle-darkmode">🌙 Dark Mode</button>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <h1>🏋️ আমার এক্সারসাইজ রুটিন</h1>
+        <div id="clock"></div>
+        <div id="date"></div>
+    </header>
+
+    <main>
+        <div class="day-selector">
+            <label for="day">দিন নির্বাচন করুন:</label>
+            <select id="day" onchange="showRoutine()">
+                <option value="Saturday">শনিবার</option>
+                <option value="Sunday">রবিবার</option>
+                <option value="Monday">সোমবার</option>
+                <option value="Tuesday">মঙ্গলবার</option>
+                <option value="Wednesday">বুধবার</option>
+                <option value="Thursday">বৃহস্পতিবার</option>
+                <option value="Friday">শুক্রবার</option>
+            </select>
+
+        </div>
+
+        <section id="routine">
+            <h2>আজকের রুটিন</h2>
+            <ul id="routine-list"></ul>
+        </section>
+
+        <div class="extra-section">
+            <h3>📌 অতিরিক্ত বিষয় সংরক্ষণ করুন:</h3>
+            <input type="text" id="extra-subject" placeholder="যেমন: Spoken English">
+            <button onclick="addExtraSubject()">➕ যোগ করুন</button>
+            <div id="extra-subject-display"></div>
+            <ul id="extraSubjectsList"></ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>মেড উইথ ❤️ বাই Nihal</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

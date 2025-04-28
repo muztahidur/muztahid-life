@@ -1,0 +1,207 @@
+/* --- মূল সেটিংস --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #e6f5ea, #d9f5dc);
+  color: #2e7d32;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header .tagline {
+  font-size: 1rem;
+  color: #388e3c;
+  margin-bottom: 1rem;
+}
+
+.dates, .sun-times {
+  background: #c8e6c9;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 0.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date-item {
+  margin: 0.5rem 0;
+}
+
+.sun-times p {
+  margin: 0.3rem 0;
+}
+
+/* নামাজ টাইম সেকশন */
+.prayer-times-section {
+  background: #d0f0c0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.prayer {
+  background: #ffffff;
+  border: 1px solid #81c784;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.prayer h3 {
+  margin-bottom: 0.5rem;
+}
+
+.save-button {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.save-button:hover {
+  background-color: #2e7d32;
+}
+
+/* মেইন লিঙ্কস */
+.links-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-link {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-link:hover {
+  background-color: #81c784;
+}
+
+/* ফুটার */
+.app-footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #388e3c;
+}
+
+/* ডার্ক মোড */
+body.dark-mode {
+  background: linear-gradient(to bottom, #1b1b1b, #333);
+  color: #eeeeee;
+}
+
+body.dark-mode header .tagline,
+body.dark-mode .app-footer {
+  color: #cccccc;
+}
+
+body.dark-mode .dates,
+body.dark-mode .sun-times,
+body.dark-mode .prayer-times-section {
+  background: #2e2e2e;
+}
+
+body.dark-mode .prayer {
+  background: #3a3a3a;
+  border-color: #555;
+}
+
+body.dark-mode .button-link {
+  background-color: #4caf50;
+  color: white;
+}
+
+body.dark-mode .button-link:hover {
+  background-color: #66bb6a;
+}
+
+/* ডার্ক মোড বাটন */
+.dark-mode-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #43a047;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.dark-mode-btn:hover {
+  background: #2e7d32;
+}
+
+/* সুন্দর এন্ট্রি এনিমেশন */
+header, main, footer {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* নামাজ টাইম হাইলাইট এবং পাস্ট টাইম স্টাইল */
+.current-prayer {
+  background-color: #f0ad4e; /* Light orange for current prayer */
+  font-weight: bold;
+}
+
+.past-prayer {
+  color: #ccc; /* Light gray color for past prayers */
+}

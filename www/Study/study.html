@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Routine</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle Button -->
+
+  <button id="dark-mode-toggle">🌙</button>
+  <header>
+    <h1>📚 আমার স্টাডি রুটিন</h1>
+    <div id="date-day-time" class="date-info"></div> <!-- নতুন লাইন -->
+  </header>
+
+
+  <main>
+    <div class="selector-group">
+      <label for="day-select">দিন বাছাই করুন:</label>
+      <select id="day-select">
+        <option value="">🗓️ দিন নির্বাচন করুন</option>
+        <option value="শনিবার">শনিবার</option>
+        <option value="রবিবার">রবিবার</option>
+        <option value="সোমবার">সোমবার</option>
+        <option value="মঙ্গলবার">মঙ্গলবার</option>
+        <option value="বুধবার">বুধবার</option>
+        <option value="বৃহস্পতিবার">বৃহস্পতিবার</option>
+        <option value="শুক্রবার">শুক্রবার</option>
+      </select>
+    </div>
+
+    <div class="time-selector">
+      <label for="day-select">সময় নির্বাচন করুন:</label>
+      <div class="toggle-buttons">
+        <button onclick="showRoutine('morning')">🌅 সকাল</button>
+        <button onclick="showRoutine('midday')">🍴 মধ্যাহ্ন</button>
+        <button onclick="showRoutine('night')">🌙 রাত</button>
+      </div>
+    </div>
+
+    <div id="routine-output"></div>
+
+    <div class="extra-section">
+      <h3>📌 অতিরিক্ত বিষয় সংরক্ষণ করুন:</h3>
+      <input type="text" id="extra-subject" placeholder="যেমন: Spoken English">
+      <button onclick="addExtraSubject()">➕ যোগ করুন</button>
+      <div id="extra-subject-display"></div>
+      <ul id="extraSubjectsList"></ul>
+    </div>
+
+    <div class="timer-container">
+      <!-- <h2>⏰ টাইমার</h2> -->
+      <p id="timer" class="timer-display">00:00:00</p>
+      <div class="timer-buttons">
+        <button id="start-timer">শুরু করুন</button>
+        <button id="pause-timer">বিরতি দিন</button>
+        <button id="reset-timer">রিসেট করুন</button>
+      </div>
+    </div>
+    
+
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

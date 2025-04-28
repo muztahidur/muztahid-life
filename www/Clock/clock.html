@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muztahid App | Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <button id="dark-mode-toggle">🌙</button> <!-- Add Dark Mode Toggle -->
+    <h1>🕰️ Clock</h1>
+    <p>Your Daily Alarm and Timer</p>
+  </header>
+
+  <main>
+    <!-- Stop alarm button, initially hidden -->
+    <button id="stop-alarm-btn" style="display:none;">🛑 এলার্ম থামাও</button>
+
+
+    <!-- Current Time Display -->
+    <div id="current-time" class="clock-display"></div>
+
+    <!-- Today's Alarms List -->
+    <div id="alarms-list">
+      <h2>Today's Alarms</h2>
+      <ul id="alarm-list"></ul>
+    </div>
+    <!-- Add a toggle button for hiding/showing the delete button -->
+    <button id="toggle-delete-btn" class="toggle-delete-btn">
+      <i class="fas fa-trash-alt"></i> Hide ❌ মুছুন
+    </button>
+
+
+    <!-- Add Alarm Form -->
+    <section id="add-alarm">
+      <h2>নতুন এলার্ম যোগ করুন</h2>
+      <input type="time" id="new-alarm-time" placeholder="এলার্ম সময়">
+      <input type="text" id="new-alarm-subject" placeholder="বিষয়">
+      <button id="add-alarm-btn">এলার্ম যোগ করুন</button>
+    </section>
+    <!-- Audio element for playing alarm sound -->
+    <audio id="alarm-audio" src="alarm.mp3" preload="auto"></audio>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Muztahid App. All rights reserved.</p>
+  </footer>
+  <script>
+    document.addEventListener('deviceready', function () {
+      cordova.plugins.notification.local.schedule({
+        id: 1,
+        title: '📚 পড়াশোনার সময়!',
+        text: 'এখনই পড়তে বসো!',
+        foreground: true,
+        trigger: { in: 10, unit: 'second' } // ১০ সেকেন্ড পর নোটিফিকেশন
+      });
+    }, false);
+  </script>
+
+</body>
+
+</html>
