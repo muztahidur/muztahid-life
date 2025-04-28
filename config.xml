@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.myapp" version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <name>Muztahid Life</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+
+    <content src="index.html" />
+
+    <!-- Permissions -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <access origin="*" />
+
+    <!-- Global Splash Preferences -->
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="ShowSplashScreen" value="true" />
+
+    <!-- Android platform-specific settings -->
+    <platform name="android">
+        <!-- App Icons -->
+        <icon src="res/icon/icon.png" density="mdpi" />
+        <icon src="res/icon/icon.png" density="hdpi" />
+        <icon src="res/icon/icon.png" density="xhdpi" />
+        <icon src="res/icon/icon.png" density="xxhdpi" />
+        <icon src="res/icon/icon.png" density="xxxhdpi" />
+
+        <!-- Updated Splash Screen Settings -->
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash/splash.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
+        <preference name="AndroidWindowSplashScreenShowDuration" value="3000" />
+    </platform>
+
+</widget>
